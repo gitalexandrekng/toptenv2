@@ -25,7 +25,7 @@
       margin-bottom:-700px;
       width: 1000px;
       height: 1030px;
-      background-image:url(wp-content/themes/foundation/images/ville.png);
+      background-image:url(ville.png);
       background-size:contain;
     }
 

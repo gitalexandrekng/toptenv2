@@ -1,0 +1,66 @@
+.header-full{
+  color:#FFF;
+  height:100%;
+  width:100%;
+  background-image:url(../../images/header.jpg);
+  background-size:cover;
+
+.style-bouton{
+  @extend .button;
+  font-family:"Fjalla One", Helvetica, sans-serif;
+  text-transform: uppercase;
+  height:70px;
+  width:100%;
+  padding-top:24px;
+  font-size:20px;
+}
+
+  #fondu{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+
+    #informations{
+      margin:auto;
+
+      .flow{
+        margin-top:20px;
+
+        .red{
+          @extend .style-bouton;
+          background : #c42b2b;
+
+          &:hover{
+            background : darken(#c42b2b,10%);
+          }
+        }
+
+        .blue{
+          @extend .style-bouton;
+          background:#355eb4;
+
+          &:hover{
+            background : darken(#355eb4,10%);
+          }
+        }
+      }
+
+      ul{
+        font-size:16px;
+
+        li{
+          list-style-image: url(../../images/fleche.png);
+          margin-bottom:10px;
+        }
+      }
+    }
+  }
+}
+
+.fond-heros{
+  background-image:url(../../images/fond.png);
+  background-size:cover;
+  background-position:top;
+  background-attachment: fixed;
+}

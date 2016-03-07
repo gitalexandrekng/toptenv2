@@ -1,6 +1,19 @@
+@mixin font-front($color){
+  font-family:"Fjalla One", Helvetica, sans-serif;
+  font-size:26px;
+  border-left:5px solid $color;
+  margin:0px;
+  padding-left:10px;
+  text-transform:uppercase;
+}
+
 #page {
+
+  background:rgba(255,255,255,0.7);
+  padding-top:10px;
+
   @include grid-row();
-  margin-top: 3rem;
+  //margin-top: 3rem;
 
   .main-content {
     @include breakpoint(small) {
@@ -8,8 +21,16 @@
     }
 
     @include breakpoint(medium) {
-      @include grid-column(8);
+      @include grid-column(12);
     }
+  }
+
+  #topten{
+    @include font-front(#c42b2b);
+  }
+
+  #last{
+    @include font-front(#355eb4);
   }
 
 }

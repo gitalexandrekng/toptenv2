@@ -9,8 +9,9 @@
  */
 
 ?>
-
+			</div>
 		</section>
+		
 		<div id="footer-container">
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
