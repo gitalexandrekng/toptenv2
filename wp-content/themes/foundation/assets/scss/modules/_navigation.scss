@@ -1,5 +1,10 @@
 /* Navigation breakpoints */
 
+#site-navigation{
+    width:100%;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
 .desktop-menu, .top-bar-left {
   @include show-for(medium);
 }
@@ -26,7 +31,6 @@
 
 /* Tablet and desktop menu */
 .top-bar {
-
   font-family:"Fjalla One";
   text-transform:uppercase;
 
@@ -44,6 +48,7 @@
     font-weight: bold;
     font-size: 0.8rem;
     line-height: 1;
+    transition:background 0.3s;
 
     &:hover:not(.button) {
       background-color: #000;

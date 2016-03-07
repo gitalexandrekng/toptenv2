@@ -16,7 +16,7 @@
 get_header(); ?>
 <div class="fond-heros">
 <div id="page" role="main">
-	<article class="main-content">
+	<article class="row main-content">
 
 		<h2 id="topten">TOP 10</h2>
 		<h2 id="last">Dernières actualités</h2>
@@ -25,7 +25,7 @@ get_header(); ?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+			<?php get_template_part( 'template-parts/content', 'accueil', get_post_format() ); ?>
 		<?php endwhile; ?>
 
 		<?php else : ?>
@@ -43,6 +43,9 @@ get_header(); ?>
 
 	</article>
 
+</div>
+<div class="all">
+    <a href="#" class="button-all">Voir toutes les actualités</a>
 </div>
 
 <?php get_footer();

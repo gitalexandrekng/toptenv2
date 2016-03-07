@@ -19,13 +19,13 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define('DB_NAME', 'toptenv2');
+define('DB_NAME', 'topten_v2');
 
 /** Utilisateur de la base de données MySQL. */
 define('DB_USER', 'root');
 
 /** Mot de passe de la base de données MySQL. */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', '');
 
 /** Adresse de l'hébergement MySQL. */
 define('DB_HOST', 'localhost');
@@ -49,14 +49,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'e+R00&L4EJ9X]42jh2,@n.N=|B)Y47}UhgzN|)+0[(Ve}uo@$#/)*RR)5ZjeAMM;');
-define('SECURE_AUTH_KEY',  'O?|+p.DxOxm.fgCN-l^^SO4M+mzCVt)rg!rN^fBv&QbF*E.)av}6y~7x4C^zNP->');
-define('LOGGED_IN_KEY',    'uy| hMd@3 g]DxUJwZNT{CnPan0_P}%g3;_QVdj|C-|2ue;=Msyt&us|qQz~,:|P');
-define('NONCE_KEY',        'aZrs&BM.>]vow}.X:aoRz )lE+@y1EFR+,/L=[YcUi/9fw0#y4hEwF&!c_8kZ^rw');
-define('AUTH_SALT',        'BKAi /TK2[m4$?vy {-);Xv33B/CJ]z[QP61uc_#-nBpr_pBU5DF^d_$v-Qz{0BL');
-define('SECURE_AUTH_SALT', '?V%>W-4PqgP+Kt-q5:n>?:[I]8N-|D0804yps2 k~Od.&n,m|f5xkKCb]iL[z%|0');
-define('LOGGED_IN_SALT',   '3LOdhcL5.+r5m>8/<97-S,lpZ* Y8._bq?I=srETh/E}7h:4KpbTg!Z;MFt1H{go');
-define('NONCE_SALT',       's+,C~x3{u8|WWbPbAus/>$^j~i3.J6p/SL4k/zfmcujz^d+{]U%gSanwx{|ppq6T');
+define('AUTH_KEY',         '9[k{U2F0qRvj!br8Id}yVhhQTxIX%H/&G%G(S|EzsD4}b|qJ6++*~,l2:mrNYP^J');
+define('SECURE_AUTH_KEY',  '#wv8+~FoMY6R1{eE&s!n+KtU+&l OD:S?/]C)k+^$j9QjkNn]TH>VwhCRdYQ{Wk%');
+define('LOGGED_IN_KEY',    ']waYhu+14dj].4(V|Lme[^JBlCHa<H+fiF))ptVguP| ::88tqiQ]Vo1t,}?aaL8');
+define('NONCE_KEY',        'iukC+.:iH==NjC)#.LewyIwY-YG%F&Yl;G,hIMs6:AkNgzKK}dbW9FpJ.wGqyk|v');
+define('AUTH_SALT',        'kt=/t7,bOReH UU^|U1M|5o*u.t8Jd21)IBX_Ck7@yC9m3chdk&vQJ-}0U7|:I0,');
+define('SECURE_AUTH_SALT', '4xixrQs~ DNNFd*GibpK8>wP;aVP.=*IMU>;<fYI`ExAEO*a~DkU?3W--s#rp8@S');
+define('LOGGED_IN_SALT',   'v+u5<=oHY@@`}O|nploS )gicN>Bt{!??moGPW&:QZd+Y6{A1L!`1?sAME9Pc`(D');
+define('NONCE_SALT',       'k<]_Bc-c$?0*MJEj}<+JHFXZ?!X[mx+-2R&0E^19Xr{Q:8J.MDVj1Nd!MLI?je(4');
 /**#@-*/
 
 /**

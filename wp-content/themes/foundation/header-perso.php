@@ -16,6 +16,9 @@
           <a href="" class="blue">S'abonner</a>
         </div>
       </div>
+      <div class="text-center scroll">
+          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/scroll.png" alt="">
+      </div>
     </div>
   </div>
 </div>
