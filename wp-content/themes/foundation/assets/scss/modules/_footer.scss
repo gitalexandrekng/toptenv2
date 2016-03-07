@@ -85,12 +85,54 @@ $font : "Fjalla One", Helvetica, sans-serif;
 }
 
 .footer-tqt{
-	height:200px;
+	color:white;
 	background:black;
 	width:100%;
 
 	.contain{
+		padding-top:20px;
 		max-width:1200px;
+		margin:auto;
+
+		ul{
+			li{
+				list-style-type: none;
+				padding-bottom:5px;
+			}
+		}
+
+		.botz{
+			height: 40px;
+			background-color:#3d3d3d;
+			border:0;
+			text-align:center;
+			font-style:italic;
+			font-size:14px;
+
+			&:focus{
+				outline: none;
+				box-shadow: 0px 0px 0px;
+				color:#aaaaaa;
+			}
+		}
+
+		.botz-submit{
+			@extend .button;
+			background:#c42b2b;
+
+			&:hover{
+				background:darken(#c42b2b, 10%);
+			}
+		}
+
+		.socialmedia{
+			ul{
+				li{
+					display:inline-block;
+					margin-right:20px;
+				}
+			}
+		}
 	}
 }
 

@@ -14,11 +14,22 @@
  */
 
 get_header(); ?>
-<div class="fond-heros">
 <div id="page" role="main">
 	<article class="row main-content">
 
 		<h2 id="topten">TOP 10</h2>
+        <div class="slide-top">
+            <div id="slide-top" class="owl-carousel">
+                <div> <div class="slide-image"><img src="<?php echo get_stylesheet_directory_uri()?>/images/jacket/une.jpg" alt=""></div> <div class="slide-texte">Texte</div></div>
+                <div> <div class="slide-image"><img src="<?php echo get_stylesheet_directory_uri()?>/images/jacket/deux.jpg" alt=""></div> <div class="slide-texte">Texte</div></div>
+                <div> <div class="slide-image"><img src="<?php echo get_stylesheet_directory_uri()?>/images/jacket/une.jpg" alt=""></div> <div class="slide-texte">Texte</div></div>
+                <div> <div class="slide-image"><img src="<?php echo get_stylesheet_directory_uri()?>/images/jacket/une.jpg" alt=""></div> <div class="slide-texte">Texte</div></div>
+                <div> <div class="slide-image"><img src="<?php echo get_stylesheet_directory_uri()?>/images/jacket/une.jpg" alt=""></div> <div class="slide-texte">Texte</div></div>
+                <div> <div class="slide-image"><img src="<?php echo get_stylesheet_directory_uri()?>/images/jacket/une.jpg" alt=""></div> <div class="slide-texte">Texte</div></div>
+                <div> <div class="slide-image"><img src="<?php echo get_stylesheet_directory_uri()?>/images/jacket/une.jpg" alt=""></div> <div class="slide-texte">Texte</div></div>
+            </div>
+        </div>
+
 		<h2 id="last">Dernières actualités</h2>
 
 	<?php if ( have_posts() ) : ?>

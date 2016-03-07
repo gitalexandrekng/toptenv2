@@ -56,6 +56,7 @@ var PATHS = {
 
     // Motion UI
     'assets/components/motion-ui/motion-ui.js',
+    'assets/components/owl.carousel/dist/owl.carousel.js',
 
     // Include your own custom scripts (located in the custom folder)
     'assets/javascript/custom/*.js',

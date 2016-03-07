@@ -19,6 +19,7 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-114x114.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-72x72.png">
 		<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon.png">
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/owl.carousel/dist/assets/owl.carousel.css">
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -66,5 +67,32 @@
 
 		}
 	?>
+	<div class="fond-heros">
+		<div class="sliderz">
+            <div class="padding">
+                <div class="single-slide" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)">
+                    <div class="single-slide-image">
+                        <div class="titre">Deadpool VS spiderman</div>
+                        <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
+                    </div>
+    		    </div>
+		    </div>
+            <div class="padding">
+                <div class="single-slide" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)">
+                    <div class="single-slide-image">
+                        <div class="titre">Deadpool VS spiderman</div>
+                        <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
+                    </div>
+    		    </div>
+		    </div>
+            <div class="padding">
+                <div class="single-slide" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)">
+                    <div class="single-slide-image">
+                        <div class="titre">Deadpool VS spiderman</div>
+                        <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
+                    </div>
+    		    </div>
+		    </div>
+		</div>
 		<section class="container">
 			<?php do_action( 'foundationpress_after_header' );

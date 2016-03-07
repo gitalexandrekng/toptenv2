@@ -66,7 +66,52 @@ $font : "Fjalla One", Helvetica, sans-serif;
   background-position:top;
   background-attachment: fixed;
   padding-bottom:200px;
-  padding-top:100px;
+  padding-top:18px;
+
+  .sliderz{
+      height:400px;
+      width:100%;
+      overflow:hidden;
+      margin-bottom:50px;
+      display:flex;
+      justify-content: center;
+
+    .padding{
+        padding-left:10px;
+        padding-right:10px;
+        margin:auto;
+
+        .single-slide {
+            margin:auto;
+            width: 1200px;
+            height: 400px;
+            overflow:hidden;
+            position:relative;
+            background-size:cover;
+            display:flex;
+
+            .single-slide-image {
+                position:relative;
+                margin-top:auto;
+                margin-bottom:auto;
+                margin-left:auto;
+                padding-right:30px;
+                text-align:right;
+
+                .titre{
+                    color:white;
+                    text-shadow: 0px 2px 5px black;
+                }
+
+                .bouton-decouvrir{
+                    @extend .button;
+                    margin-left:auto;
+                    font-family:$font;
+                }
+            }
+        }
+    }
+  }
 }
 
 .scroll{
@@ -172,4 +217,22 @@ $font : "Fjalla One", Helvetica, sans-serif;
             background:darken(#355eb4, 10%);
         }
     }
+}
+
+.slide-top{
+    margin-top:10px;
+    margin-bottom:50px;
+}
+
+.slide-image{
+    overflow:hidden;
+    max-width:180px;
+    max-height:270px;
+    padding:5px;
+}
+
+.slide-texte{
+    font-family:$font;
+    text-align:center;
+    padding:5px;
 }
