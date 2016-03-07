@@ -68,31 +68,42 @@
 		}
 	?>
 	<div class="fond-heros">
-		<div class="sliderz">
-            <div class="padding">
-                <div class="single-slide" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)">
-                    <div class="single-slide-image">
-                        <div class="titre">Deadpool VS spiderman</div>
-                        <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
+        <div class="degrade"></div>
+		<div class="sliderz owl-carousel" id="slide-center">
+            <div>
+                <div class="padding">
+                    <div class="single-slide">
+                        <div class="single-slide-image"  style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)">
+                        </div>
+        		    </div>
+                    <div class="single-slide-fond">
+                        <div class="single-texte">
+                            <div class="titre">Deadpool VS spiderman</div>
+                            <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
+                        </div>
                     </div>
     		    </div>
-		    </div>
-            <div class="padding">
-                <div class="single-slide" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)">
-                    <div class="single-slide-image">
-                        <div class="titre">Deadpool VS spiderman</div>
-                        <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
+            </div>
+            <div>
+                <div class="padding">
+                    <div class="single-slide">
+                        <div class="single-slide-image"  style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/deux.jpg)">
+                        </div>
+        		    </div>
+                    <div class="single-slide-fond">
+                        <div class="single-texte">
+                            <div class="titre">Deadpool VS spiderman</div>
+                            <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
+                        </div>
                     </div>
     		    </div>
-		    </div>
-            <div class="padding">
-                <div class="single-slide" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)">
-                    <div class="single-slide-image">
-                        <div class="titre">Deadpool VS spiderman</div>
-                        <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
-                    </div>
-    		    </div>
-		    </div>
+            </div>
 		</div>
+        <div class="bubblez">
+            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)"></div>
+            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/deux.jpg)"><div class="white"></div></div>
+            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)"><div class="white"></div></div>
+            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/deux.jpg)"><div class="white"></div></div>
+        </div>
 		<section class="container">
 			<?php do_action( 'foundationpress_after_header' );

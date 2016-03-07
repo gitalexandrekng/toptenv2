@@ -130,6 +130,18 @@ var owl = $('#slide-top');
         autoplayHoverPause:true,
         lazyLoad:true,
     });
+
+    var owl = $('#slide-center');
+        owl.owlCarousel({
+            items:1,
+            loop:true,
+            margin:0,
+            autoplay:false,
+            autoplaySpeed: 1500,
+            autoplayTimeout: 2500,
+            autoplayHoverPause:true,
+            lazyLoad:true,
+        });
 </script>
 </body>
 </html>

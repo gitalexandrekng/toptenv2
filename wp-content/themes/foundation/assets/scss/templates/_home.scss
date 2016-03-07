@@ -61,42 +61,80 @@ $font : "Fjalla One", Helvetica, sans-serif;
 }
 
 .fond-heros{
-  background-image:url(../../images/fond.png);
-  background-size:cover;
-  background-position:top;
-  background-attachment: fixed;
+  background:url(../../images/fond.png) fixed;
+  background-size: cover;
   padding-bottom:200px;
-  padding-top:18px;
 
-  .sliderz{
-      height:400px;
+  .degrade{
       width:100%;
-      overflow:hidden;
-      margin-bottom:50px;
+      height:250px;
+      background: linear-gradient(to bottom, #FFF, rgba(255,255,255,0));
+  }
+
+  .bubblez{
+      margin-top:-40px;
+      position:relative;
+      z-index:3;
+      height:100px;
+      margin-bottom:100px;
       display:flex;
       justify-content: center;
 
-    .padding{
-        padding-left:10px;
-        padding-right:10px;
-        margin:auto;
+      .bubblez-contain{
+          height:110px;
+          width:110px;
+          border-radius:50%;
+          background:#CCC;
+          border:2px solid #FFF;
+          box-shadow:0px 0px 15px rgba(0,0,0,0.8);
+          margin-right:20px;
+          background-size:cover;
+          background-position:center;
+          position:relative;
+          overflow:hidden;
 
-        .single-slide {
-            margin:auto;
-            width: 1200px;
-            height: 400px;
-            overflow:hidden;
-            position:relative;
-            background-size:cover;
+          .white{
+              background:rgba(255,255,255,0.5);
+              height:100%;
+              width:100%;
+              position:absolute;
+              top:0;
+              transition:background 0.5s;
+
+              &:hover{
+                  background:rgba(255,255,255,0)
+              }
+          }
+      }
+  }
+
+  .sliderz{
+      margin-top:-150px;
+      height:400px;
+      width:107%;
+      overflow:hidden;
+      position:relative;
+
+    .padding{
+        width:100%;
+        height:100%;
+        position:relative;
+
+        .single-slide-fond{
+            top:0;
+            position:absolute;
+            background:rgba(255,255,255,0.5);
+            width:100%;
+            height:100%;
+            z-index:1;
             display:flex;
 
-            .single-slide-image {
-                position:relative;
+            .single-texte{
                 margin-top:auto;
                 margin-bottom:auto;
-                margin-left:auto;
-                padding-right:30px;
-                text-align:right;
+                padding-left:65%;
+                width:100%;
+                text-align:center;
 
                 .titre{
                     color:white;
@@ -108,6 +146,30 @@ $font : "Fjalla One", Helvetica, sans-serif;
                     margin-left:auto;
                     font-family:$font;
                 }
+            }
+        }
+
+        .single-slide {
+            z-index:2;
+            width: 70%;
+            height: 400px;
+            overflow:hidden;
+            position:relative;
+            background-size:cover;
+            transform:skewX(-15deg);
+            transform-origin: top left;
+            box-shadow::0px 0px 20px rgba(0,0,0,0.5);
+
+            .single-slide-image {
+                width:110%;
+                height:100%;
+                left:-5%;
+                background-size:cover;
+                padding-right:30px;
+                text-align:right;
+                transform: skewX(15deg);
+                display:flex;
+                position:absolute;
             }
         }
     }
