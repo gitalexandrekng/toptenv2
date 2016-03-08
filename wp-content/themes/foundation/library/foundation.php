@@ -102,7 +102,7 @@ class Foundationpress_Comments extends Walker_Comment{
 	 * start_lvl() only goes as high as 1 deep nested comments */
 	function __construct() { ?>
 
-        <h3><?php comments_number( __( 'No Responses to', 'foundationpress' ), __( 'One Response to', 'foundationpress' ), __( '% Responses to', 'foundationpress' ) ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
+        <h3 class="nombre"><?php comments_number( __( 'No Responses to', 'foundationpress' ), __( 'One Response to', 'foundationpress' ), __( '% Responses to', 'foundationpress' ) ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
         <ol class="comment-list">
 
     <?php }
@@ -131,45 +131,45 @@ class Foundationpress_Comments extends Walker_Comment{
 		$GLOBALS['comment'] = $comment;
 		$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' ); ?>
 
-        <li <?php comment_class( $parent_class ); ?> id="comment-<?php comment_ID() ?>">
+        <li <?php comment_class( $parent_class); ?> id="comment-<?php comment_ID() ?>">
             <article id="comment-body-<?php comment_ID() ?>" class="comment-body">
 
 
+        <div class="comment-author">
 
-		<header class="comment-author">
+            <div class="commentaire-content">
+                <div class="commentaire-avatar"><?php echo get_avatar( $comment, $args['avatar_size'] ); ?></div>
+                <div class="commentaires-texte">
+                    <?php printf( __( '<cite class="fn">%s</cite>', 'foundationpress' ), get_comment_author_link() ) ?>
 
-			<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
+        			<time datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
 
-			<div class="author-meta vcard author">
+                    <section id="comment-content-<?php comment_ID(); ?>" class="comment">
+                        <?php if ( ! $comment->comment_approved ) : ?>
+                        		<div class="notice">
+    					<div class="bottom"><?php _e( 'Your comment is awaiting moderation.' ); ?></div>
+    				</div>
+                        <?php else : comment_text(); ?>
+                        <?php endif; ?>
+                    </section>
 
-			<?php printf( __( '<cite class="fn">%s</cite>', 'foundationpress' ), get_comment_author_link() ) ?>
-			<time datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
+                    <div class="reply">
+                        <?php $reply_args = array(
+    						'depth' => $depth,
+    						'max_depth' => $args['max_depth'],
+    						);
 
-			</div><!-- /.comment-author -->
+    					comment_reply_link( array_merge( $args, $reply_args ) );  ?>
+                    </div>
+                </div>
+            </div>
 
-		</header>
-
-                <section id="comment-content-<?php comment_ID(); ?>" class="comment">
-                    <?php if ( ! $comment->comment_approved ) : ?>
-                    		<div class="notice">
-					<p class="bottom"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
-				</div>
-                    <?php else : comment_text(); ?>
-                    <?php endif; ?>
-                </section><!-- /.comment-content -->
+        </div>
 
                 <div class="comment-meta comment-meta-data hide">
                     <a href="<?php echo htmlspecialchars( get_comment_link( get_comment_ID() ) ) ?>"><?php comment_date(); ?> at <?php comment_time(); ?></a> <?php edit_comment_link( '(Edit)' ); ?>
                 </div><!-- /.comment-meta -->
 
-                <div class="reply">
-                    <?php $reply_args = array(
-						'depth' => $depth,
-						'max_depth' => $args['max_depth'],
-						);
-
-					comment_reply_link( array_merge( $args, $reply_args ) );  ?>
-                </div><!-- /.reply -->
             </article><!-- /.comment-body -->
 
     <?php }

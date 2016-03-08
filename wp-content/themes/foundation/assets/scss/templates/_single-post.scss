@@ -1,4 +1,13 @@
+$blue : #355eb4;
+
 #single-post {
+
+    background:rgba(255,255,255,0.7);
+    padding-top:30px;
+    padding-bottom:40px;
+    padding-left:30px;
+    padding-right:30px;
+
   @include grid-row();
   margin-top: 3rem;
 
@@ -8,8 +17,65 @@
     }
 
     @include breakpoint(medium) {
-      @include grid-column(8);
+      @include grid-column(12);
     }
   }
 
+  .entry-title{
+      color: $blue;
+      font-family:"Fjalla One";
+      text-transform: uppercase;
+  }
+
+  #inpage{
+      display:flex;
+
+      .actions{
+          height:35px;
+          background:#FFF;
+          border:1px solid #d1d1dc;
+          width:85%;
+
+          .containerz{
+              height:100%;
+
+              .titrez{
+                  color:white;
+                  font-family:"Fjalla One", Helvetica, sans-serif;
+                  width:200px;
+                  background:$blue;
+                  height:100%;
+                  display:flex;
+                  text-transform:uppercase;
+
+                  .in{margin:auto;}
+              }
+          }
+      }
+
+      .socialmedia{
+          text-align:right;
+
+          ul{
+              li{
+                  display:inline-block;
+              }
+          }
+      }
+  }
+
+}
+
+
+#breadcrumbs{
+    font-family:"Fjalla One", Helvetica, sans-serif;
+    font-size:20px;
+
+    a{
+        color:black;
+    }
+
+    .breadcrumb_last{
+        color:$blue;
+    }
 }

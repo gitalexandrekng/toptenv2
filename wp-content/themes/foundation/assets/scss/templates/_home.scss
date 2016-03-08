@@ -64,6 +64,7 @@ $font : "Fjalla One", Helvetica, sans-serif;
   background:url(../../images/fond.png) fixed;
   background-size: cover;
   padding-bottom:200px;
+  overflow: hidden;
 
   .degrade{
       position:absolute;
@@ -298,4 +299,30 @@ $font : "Fjalla One", Helvetica, sans-serif;
     font-family:$font;
     text-align:center;
     padding:5px;
+}
+
+// COMMENTAIRES
+.nombre{
+    color:#c42b2b;
+    font-family: "Fjalla One";
+}
+
+.comment-author {
+    img{
+        border-radius:50%;
+    }
+}
+
+#comments {
+    li{
+        list-style-type: none;
+    }
+}
+
+.commentaire-content{
+    display:flex;
+
+    .commentaire-avatar{
+        margin-right:20px;
+    }
 }
