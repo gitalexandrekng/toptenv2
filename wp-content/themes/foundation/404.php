@@ -12,10 +12,21 @@
     }
     body{
           height:100%;
-        background: -webkit-linear-gradient(#dadada, #bebebe);
+        /*background: -webkit-linear-gradient(#dadada, #bebebe);
         background: -o-linear-gradient(#dadada, #bebebe);
-        background: linear-gradient(#dadada, #bebebe);
+        background: linear-gradient(#dadada, #bebebe);*/
+        background:#4aabde;
         overflow:hidden;
+        }
+
+        #quatre{
+            color:white;
+          font-size:136px;
+          font-family:"Fjalla One", sans-serif;
+          position:absolute;
+          top:100px;
+          width:100%;
+          text-align:center;
         }
 
     #test {
@@ -33,7 +44,7 @@
       #test{
         width: 800px;
         height:824px;
-        margin-bottom: -534px;
+        margin-bottom: -334px;
       }
     }
 
@@ -41,7 +52,7 @@
       #test{
         width:600px;
         height:618px;
-        margin-bottom:-420px;
+        margin-bottom:-220px;
       }
     }
 
@@ -62,15 +73,6 @@
       display:flex;
       width:100%;
       height:100%;
-    }
-
-    #quatre{
-      font-size:136px;
-      font-family:"Fjalla One", sans-serif;
-      position:absolute;
-      top:100px;
-      width:100%;
-      text-align:center;
     }
     </style>
   </head>
