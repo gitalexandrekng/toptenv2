@@ -1,0 +1,47 @@
+.commentary{
+    display:flex;
+    width:100%;
+
+    .commentary_field{
+        flex:1;
+    }
+
+    .commentary_button{
+        height:50px;
+        width:200px;
+        font-family:"Fjalla One", sans-serif, helvetica;
+        text-transform: uppercase;
+    }
+}
+
+.slash-while{
+    overflow:hidden;
+    width:100%;
+    color:#dcddde;
+    margin-bottom:40px;
+    margin-top:40px;
+}
+
+.post-date{
+    text-align:right;
+    display:flex;
+    font-size:12px;
+    margin-top:50px;
+
+    .tags{
+        text-transform: uppercase;
+        color:$primary-color;
+
+        img{
+            margin-right:5px;
+        }
+    }
+
+    .date{
+        margin-left:auto;
+    }
+}
+
+.article-thumbnail{
+    margin-bottom:50px;
+}

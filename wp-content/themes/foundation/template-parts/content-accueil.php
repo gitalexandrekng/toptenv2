@@ -30,12 +30,12 @@
         	<div class="entry-content">
         		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
         	</div>
-        	<footer>
+        	<!--<footer>
         		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
-        	</footer>
+        	</footer>-->
         </div>
         <div class="crayon"><div class="flex"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/crayon.png" alt=""></div></div>
         <div class="auteur"><div class="flex"><?php foundationpress_entry_meta(); ?></div></div>
-        <div class="croix"><div class="flex">+</div></div>
+        <a class="croix" href="<?php the_permalink(); ?>"><div class="flex">+</div></a>
 	</div>
 </div>

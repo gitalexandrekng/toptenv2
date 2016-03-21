@@ -305,6 +305,12 @@ $font : "Fjalla One", Helvetica, sans-serif;
 .nombre{
     color:#c42b2b;
     font-family: "Fjalla One";
+    font-size:24px;
+    margin-bottom:50px;
+
+    img{
+        margin-right:10px;
+    }
 }
 
 .comment-author {
@@ -321,8 +327,32 @@ $font : "Fjalla One", Helvetica, sans-serif;
 
 .commentaire-content{
     display:flex;
+    margin-bottom:40px;
 
     .commentaire-avatar{
         margin-right:20px;
+    }
+
+    .commentaire-texte{
+
+        .commentaire-auteur{
+
+            .nom{
+                margin-right:10px;
+                font-family:"Fjalla One", Helvetica, sans-serif;
+                text-transform: uppercase;
+            }
+
+            .datez{
+                font-size:12px;
+
+                a{
+                    color:#82828b;
+                }
+            }
+
+            display:flex;
+
+        }
     }
 }
