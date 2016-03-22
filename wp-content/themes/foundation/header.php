@@ -48,44 +48,16 @@
 				</ul>
 			</div>-->
 			<div class="nav-contain">
-				<div class="nav-connect">
-                    <div class="loupe"><a href="#searching"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/loupe.png" alt=""></a></div>
-				    <a class="in-button" href="#connect">
-				        Se connecter
-				    </a>
-				</div>
-	        	<div class="top-bar">
-	  				<?php foundationpress_top_bar_r(); ?>
+        <div class="top-bar">
+  				<?php foundationpress_top_bar_r(); ?>
 
-	  				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-	  					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-	  				<?php endif; ?>
-	  			</div>
+  				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
+  					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+  				<?php endif; ?>
+  			</div>
 			</div>
 		</nav>
 	</header>
-    <div id="connect" class="modalDialog">
-        <div>
-            <a href="#close" title="Close" class="close"><div class="in">X</div></a>
-            <h3>Connectez-vous</h3>
-            <?php wp_login_form(); ?>
-        </div>
-    </div>
-    <div id="searching" class="modalDialogSearch">
-        <div>
-            <a href="#close" title="Close" class="close"><div class="in">X</div></a>
-            <div>
-                <div class="row">
-                    <div class="small-8 columns" style="padding:0">
-                        <input type="text" class="search-in" placeholder="Rechercher un comic">
-                    </div>
-                    <div class="small-4 columns" style="padding:0">
-                        <input type="submit" value="Envoyer" class="search-done">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 	<!--<?php
 		if ( is_home() ) {
 		    include('header-perso.php');

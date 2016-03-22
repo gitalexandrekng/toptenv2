@@ -102,9 +102,7 @@ class Foundationpress_Comments extends Walker_Comment{
 	 * start_lvl() only goes as high as 1 deep nested comments */
 	function __construct() { ?>
 
-        <h3 class="nombre">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/comment.png" alt="">
-            <?php comments_number( __( 'No Responses to', 'foundationpress' ), __( 'One Response to', 'foundationpress' ), __( '% Responses to', 'foundationpress' ) ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
+        <h3 class="nombre"><?php comments_number( __( 'No Responses to', 'foundationpress' ), __( 'One Response to', 'foundationpress' ), __( '% Responses to', 'foundationpress' ) ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
         <ol class="comment-list">
 
     <?php }
@@ -141,16 +139,10 @@ class Foundationpress_Comments extends Walker_Comment{
 
             <div class="commentaire-content">
                 <div class="commentaire-avatar"><?php echo get_avatar( $comment, $args['avatar_size'] ); ?></div>
-                <div class="commentaire-texte">
-                    <div class="commentaire-auteur">
-                        <div class="nom">
-                            <?php printf( __( '%s', 'foundationpress' ), get_comment_author_link() ) ?> •
-                        </div>
+                <div class="commentaires-texte">
+                    <?php printf( __( '<cite class="fn">%s</cite>', 'foundationpress' ), get_comment_author_link() ) ?>
 
-            			<div class="datez">
-            			    <time datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
-            			</div>
-                    </div>
+        			<time datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
 
                     <section id="comment-content-<?php comment_ID(); ?>" class="comment">
                         <?php if ( ! $comment->comment_approved ) : ?>

@@ -37,12 +37,13 @@ get_header(); ?>
 	<article <?php post_class('main-content', 'accueil') ?> id="post-<?php the_ID(); ?>">
 		<header>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<?php foundationpress_entry_meta(); ?>
 		</header>
 		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 		<div class="entry-content">
 
 		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="row article-thumbnail">
+			<div class="row">
 				<div class="column">
 					<?php the_post_thumbnail( '', array('class' => 'th') ); ?>
 				</div>
@@ -51,28 +52,10 @@ get_header(); ?>
 
 		<?php the_content(); ?>
 		</div>
-		<div class="post-date">
-			<div class="tags">
-				<?php $tag = get_the_tags(); if ( $tag ) { ?><p><img src="<?php echo get_stylesheet_directory_uri();?>/images/tag.png" alt="" /><?php the_tags( '', ', ' ); ?> </p><?php } ?>
-			</div>
-			<div class="date">
-				Posté le <?php foundationpress_entry_meta(); ?>
-			</div>
-		</div>
 		<footer>
 			<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
+			<p><?php the_tags(); ?></p>
 		</footer>
-		<div class="slash-while">
-			<?php
-			$nombre_de_slash = 1;
-
-			while ($nombre_de_slash <= 300)
-			{
-			    echo '/';
-			    $nombre_de_slash++;
-			}
-			?>
-		</div>
 		<?php do_action( 'foundationpress_post_before_comments' ); ?>
 		<?php comments_template(); ?>
 		<?php do_action( 'foundationpress_post_after_comments' ); ?>
