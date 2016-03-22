@@ -10,30 +10,8 @@ get_header(); ?>
 
 <div id="single-post" role="main">
 
-	<?php if ( function_exists('yoast_breadcrumb') )
-	{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
-
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-
-	<div id="inpage">
-        <div class="actions">
-            <div class="containerz">
-                <div class="titrez"><div class="in">Top Ten Comics</div></div>
-                <div class="like"></div>
-                <div class="comments"></div>
-                <div class="rev"></div>
-            </div>
-        </div>
-        <div class="socialmedia">
-            <ul>
-                <li><img src="<?php echo get_stylesheet_directory_uri()?>/images/social/fb.jpg" alt="" /></li>
-                <li><img src="<?php echo get_stylesheet_directory_uri()?>/images/social/tw.jpg" alt="" /></li>
-                <li><img src="<?php echo get_stylesheet_directory_uri()?>/images/social/pint.jpg" alt="" /></li>
-            </ul>
-        </div>
-	</div>
-
 	<article <?php post_class('main-content', 'accueil') ?> id="post-<?php the_ID(); ?>">
 		<header>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -63,5 +41,6 @@ get_header(); ?>
 <?php endwhile;?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
+<?php get_sidebar(); ?>
 </div>
 <?php get_footer();
