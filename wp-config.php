@@ -19,13 +19,13 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define('DB_NAME', 'topten_v2');
+define('DB_NAME', 'ttc');
 
 /** Utilisateur de la base de données MySQL. */
 define('DB_USER', 'root');
 
 /** Mot de passe de la base de données MySQL. */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'root');
 
 /** Adresse de l'hébergement MySQL. */
 define('DB_HOST', 'localhost');
@@ -49,14 +49,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '9[k{U2F0qRvj!br8Id}yVhhQTxIX%H/&G%G(S|EzsD4}b|qJ6++*~,l2:mrNYP^J');
-define('SECURE_AUTH_KEY',  '#wv8+~FoMY6R1{eE&s!n+KtU+&l OD:S?/]C)k+^$j9QjkNn]TH>VwhCRdYQ{Wk%');
-define('LOGGED_IN_KEY',    ']waYhu+14dj].4(V|Lme[^JBlCHa<H+fiF))ptVguP| ::88tqiQ]Vo1t,}?aaL8');
-define('NONCE_KEY',        'iukC+.:iH==NjC)#.LewyIwY-YG%F&Yl;G,hIMs6:AkNgzKK}dbW9FpJ.wGqyk|v');
-define('AUTH_SALT',        'kt=/t7,bOReH UU^|U1M|5o*u.t8Jd21)IBX_Ck7@yC9m3chdk&vQJ-}0U7|:I0,');
-define('SECURE_AUTH_SALT', '4xixrQs~ DNNFd*GibpK8>wP;aVP.=*IMU>;<fYI`ExAEO*a~DkU?3W--s#rp8@S');
-define('LOGGED_IN_SALT',   'v+u5<=oHY@@`}O|nploS )gicN>Bt{!??moGPW&:QZd+Y6{A1L!`1?sAME9Pc`(D');
-define('NONCE_SALT',       'k<]_Bc-c$?0*MJEj}<+JHFXZ?!X[mx+-2R&0E^19Xr{Q:8J.MDVj1Nd!MLI?je(4');
+define('AUTH_KEY',         '?6WV~ClB:iOZAr+`jPTl1^3bHQEKv#2A~v:)VpF^Ec^e->WPbGp~N+8[j?&Z-0H4');
+define('SECURE_AUTH_KEY',  'xDa(aT+&BvJ 9JJQpL^z%,%+tl5[s;X77{[Vk1l1-!KOUU<KhPrfX>9)K8H>[LPu');
+define('LOGGED_IN_KEY',    'uIE<w+YiAIyG0$MHm^M{rVP(mCPkfYK&g8~kc+7 2nKcUp.r~<F3aF<C(Pt94YZP');
+define('NONCE_KEY',        'c`LC.0>=L6}MOc,t:(>rWd-$| 6L#NOiZJZSW|9i}m;Q@9[xJQ5%[(k6]7Sy(27B');
+define('AUTH_SALT',        'i m#dldaBA4^t<8C> ]Ss*>4D ,-o|&D0XzQuPF[:1Yi9-Z5l{z#-!d:j53%mGQ-');
+define('SECURE_AUTH_SALT', '*]t3iYUPj#aMk>~[f]:UeR2I<w+GratL@SQuniH9k{4P%6|Y#ZS[+v/8{Z5+4Ahi');
+define('LOGGED_IN_SALT',   'FM8 `I.V(UE7I-4HGl-~Wv3_`6;-ul+mX%;ZR$?%e*%F%EB|QQSC|+-NPW-Fwh4*');
+define('NONCE_SALT',       'wVC+{4q|K.cv&c+7I(ZvOKq!21v<|7/<,Sn2{<i#t4|p+1h*YR<K,+ )l7J-TnI>');
 /**#@-*/
 
 /**

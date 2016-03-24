@@ -7,6 +7,8 @@ $blue : #355eb4;
     padding-bottom:40px;
     padding-left:30px;
     padding-right:30px;
+    position:relative;
+    z-index:2;
 
   @include grid-row();
   margin-top: 3rem;

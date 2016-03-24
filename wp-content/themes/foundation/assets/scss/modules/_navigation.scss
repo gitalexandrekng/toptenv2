@@ -88,10 +88,14 @@
       .in-button{
           border:1px solid white;
           padding:5px 25px 5px 25px;
-          margin:auto;
           color:white;
           font-size:12px;
           font-family:"Roboto";
+          margin:auto;
+      }
+
+      .in-or-out{
+        margin:auto;
       }
   }
 }
@@ -142,6 +146,10 @@
             text-transform: uppercase;
             font-family:"Fjalla One";
         }
+    }
+
+    .register{
+      text-align:center;
     }
 }
 

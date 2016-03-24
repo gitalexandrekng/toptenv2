@@ -49,10 +49,18 @@
 			</div>-->
 			<div class="nav-contain">
 				<div class="nav-connect">
-                    <div class="loupe"><a href="#searching"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/loupe.png" alt=""></a></div>
-				    <a class="in-button" href="#connect">
-				        Se connecter
-				    </a>
+            	<div class="loupe"><a href="#searching"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/loupe.png" alt=""></a></div>
+							<?php
+							if ( is_user_logged_in() ) {
+								?>
+
+								<a class="in-button" href="<?php echo wp_logout_url( home_url() ); ?>">Déconnexion</a>
+
+								<?php
+							} else {
+									echo '<a class="in-button" href="#connect">Se connecter</a>';
+							}
+							?>
 				</div>
 	        	<div class="top-bar">
 	  				<?php foundationpress_top_bar_r(); ?>
@@ -69,6 +77,9 @@
             <a href="#close" title="Close" class="close"><div class="in">X</div></a>
             <h3>Connectez-vous</h3>
             <?php wp_login_form(); ?>
+						<div class="register">
+							<a href="<?php echo wp_registration_url(); ?>">Inscription</a>
+						</div>
         </div>
     </div>
     <div id="searching" class="modalDialogSearch">
@@ -86,58 +97,11 @@
             </div>
         </div>
     </div>
-	<!--<?php
-		if ( is_home() ) {
-		    include('header-perso.php');
-		}
 
-		else {
+	<?php if ( is_home() ) { include('header-perso.php'); }	else { include('header-light.php');} ?>
 
-		}
-	?>-->
-
-	<?php include('header-perso.php'); ?>
 	<div class="fond-heros">
         <div class="degrade"></div>
-		<div class="sliderz owl-carousel" id="slide-center">
-            <div class="item" data-hash="one">
-                <div class="padding">
-                    <div class="single-slide">
-                        <div class="single-slide-image"  style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)">
-                        </div>
-        		    </div>
-                    <div class="single-slide-fond">
-                        <div class="single-texte">
-                            <div class="titre">Deadpool VS spiderman</div>
-                            <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
-                        </div>
-                    </div>
-    		    </div>
-            </div>
-            <div class="item" data-hash="two">
-                <div class="padding">
-                    <div class="single-slide">
-                        <div class="single-slide-image"  style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/deux.jpg)">
-                        </div>
-        		    </div>
-                    <div class="single-slide-fond">
-                        <div class="single-texte">
-                            <div class="titre">Deadpool VS spiderman</div>
-                            <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
-                        </div>
-                    </div>
-    		    </div>
-            </div>
-		</div>
-        <div class="bubblez owl-controls">
-            <div class="bubblez-contain owl-dot" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)">
-            	<div class="white"><a href="#one" style="display: block;height: 100%;background: transparent; text-indent: -5000px;">click</a></div>
-            </div>
-            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/deux.jpg)">
-
-				<div class="white"><a href="#two">click</a></div></div>
-            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)"><div class="white"></div></div>
-            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/deux.jpg)"><div class="white"></div></div>
-        </div>
+				<?php if ( is_home() ) { include('slider.php'); } else { } ?>
 		<section class="container">
 			<?php do_action( 'foundationpress_after_header' );
