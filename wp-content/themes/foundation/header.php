@@ -48,6 +48,7 @@
 				</ul>
 			</div>-->
 			<div class="nav-contain">
+<<<<<<< HEAD
 				<div class="nav-connect">
             	<div class="loupe"><a href="#searching"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/loupe.png" alt=""></a></div>
 							<?php
@@ -64,14 +65,19 @@
 				</div>
 	        	<div class="top-bar">
 	  				<?php foundationpress_top_bar_r(); ?>
+=======
+        <div class="top-bar">
+  				<?php foundationpress_top_bar_r(); ?>
+>>>>>>> d6ca827c560360cf08f2c620675f3f2483305783
 
-	  				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-	  					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-	  				<?php endif; ?>
-	  			</div>
+  				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
+  					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+  				<?php endif; ?>
+  			</div>
 			</div>
 		</nav>
 	</header>
+<<<<<<< HEAD
     <div id="connect" class="modalDialog">
         <div>
             <a href="#close" title="Close" class="close"><div class="in">X</div></a>
@@ -103,5 +109,54 @@
 	<div class="fond-heros">
         <div class="degrade"></div>
 				<?php if ( is_home() ) { include('slider.php'); } else { } ?>
+=======
+	<?php
+		if ( is_home() ) {
+		    include('header-perso.php');
+		}
+
+		else {
+
+		}
+	?>
+	<div class="fond-heros">
+        <div class="degrade"></div>
+		<div class="sliderz owl-carousel" id="slide-center">
+            <div>
+                <div class="padding">
+                    <div class="single-slide">
+                        <div class="single-slide-image"  style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)">
+                        </div>
+        		    </div>
+                    <div class="single-slide-fond">
+                        <div class="single-texte">
+                            <div class="titre">Deadpool VS spiderman</div>
+                            <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
+                        </div>
+                    </div>
+    		    </div>
+            </div>
+            <div>
+                <div class="padding">
+                    <div class="single-slide">
+                        <div class="single-slide-image"  style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/deux.jpg)">
+                        </div>
+        		    </div>
+                    <div class="single-slide-fond">
+                        <div class="single-texte">
+                            <div class="titre">Deadpool VS spiderman</div>
+                            <div><a href="#" class="bouton-decouvrir">Découvrir</a></div>
+                        </div>
+                    </div>
+    		    </div>
+            </div>
+		</div>
+        <div class="bubblez">
+            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)"></div>
+            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/deux.jpg)"><div class="white"></div></div>
+            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/une.jpg)"><div class="white"></div></div>
+            <div class="bubblez-contain" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/images/slide/deux.jpg)"><div class="white"></div></div>
+        </div>
+>>>>>>> d6ca827c560360cf08f2c620675f3f2483305783
 		<section class="container">
 			<?php do_action( 'foundationpress_after_header' );

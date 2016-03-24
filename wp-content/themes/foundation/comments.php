@@ -69,7 +69,7 @@ if ( comments_open() ) :
 	if ( (is_page() || is_single()) && ( ! is_home() && ! is_front_page()) ) :
 ?>
 <section id="respond">
-	<!--<h3><?php comment_form_title( __( 'Leave a Reply', 'foundationpress' ), __( 'Leave a Reply to %s', 'foundationpress' ) ); ?></h3>-->
+	<h3><?php comment_form_title( __( 'Leave a Reply', 'foundationpress' ), __( 'Leave a Reply to %s', 'foundationpress' ) ); ?></h3>
 	<p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
 	<?php if ( get_option( 'comment_registration' ) && ! is_user_logged_in() ) : ?>
 	<p><?php printf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'foundationpress' ), wp_login_url( get_permalink() ) ); ?></p>
@@ -103,16 +103,23 @@ if ( comments_open() ) :
 			<input type="text" class="five" name="url" id="url" value="<?php echo esc_attr( $comment_author_url ); ?>" size="22" tabindex="3">
 		</p>
 		<?php endif; ?>
-		<div class="commentary">
-			<div class="commentary_field">
-				<p>
-					<textarea name="comment" id="comment" tabindex="4"></textarea>
-				</p>
-			</div>
-			<div class="">
-				<p><input name="submit" class="button commentary_button" type="submit" id="submit" tabindex="5" value="Envoyer"></p>
-			</div>
-		</div>
+		<p>
+			<label for="comment">
+					<?php
+						_e( 'Comment', 'foundationpress' );
+					?>
+			</label>
+			<textarea name="comment" id="comment" tabindex="4"></textarea>
+		</p>
+		<p id="allowed_tags" class="small"><strong>XHTML:</strong> 
+			<?php
+				_e( 'You can use these tags:','foundationpress' );
+			?> 
+			<code>
+				<?php echo allowed_tags(); ?>
+			</code>
+		</p>
+		<p><input name="submit" class="button" type="submit" id="submit" tabindex="5" value="<?php esc_attr_e( 'Submit Comment', 'foundationpress' ); ?>"></p>
 		<?php comment_id_fields(); ?>
 		<?php do_action( 'comment_form', $post->ID ); ?>
 	</form>

@@ -141,7 +141,6 @@ var owl = $('#slide-top');
             autoplayTimeout: 2500,
             autoplayHoverPause:true,
             lazyLoad:true,
-			URLhashListener:true,
         });
 </script>
 </body>

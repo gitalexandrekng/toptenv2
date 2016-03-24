@@ -56,7 +56,7 @@ get_header(); ?>
 
 </div>
 <div class="all">
-    <a href="category/actualites/" class="button-all">Voir toutes les actualités</a>
+    <a href="#" class="button-all">Voir toutes les actualités</a>
 </div>
 
 <?php get_footer();
